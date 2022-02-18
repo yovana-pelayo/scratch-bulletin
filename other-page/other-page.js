@@ -1,4 +1,4 @@
-import { checkAuth, createPost, logout} from '../fetch-utils';
+import { checkAuth, createPost, logout } from '../fetch-utils';
 checkAuth();
 
 const createForm = document.getElementById('create-post');
