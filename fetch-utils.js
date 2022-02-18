@@ -35,10 +35,14 @@ export async function signInUser(email, password){
 export function redirectIfLoggedIn() {
     const user = getUser();
     if (user){
-        location.replace('/other-page');
+        location.replace('/user-page');
     }
 }
+export async function logout() {
+    await client.auth.signOut();
 
+    return (window.location.href = '../');
+}
 function checkError({ data, error }) {
     // eslint-disable-next-line no-console
     return error ? console.error(error) : data;

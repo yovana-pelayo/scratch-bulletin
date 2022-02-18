@@ -12,11 +12,13 @@ const signUpPassword = document.getElementById('sign-up-password');
 
 signInForm.addEventListener('submit', async (e) =>{e.preventDefault();
     await signInUser (signInEmail.value, signInPassword.value);
-    redirectIfLoggedIn();
+    console.log(signInEmail.value, signInPassword.value);
+
+    // redirectIfLoggedIn();
 });
 
 signUpForm.addEventListener('submit', async (e) =>{e.preventDefault();
     await signupUser(signUpEmail.value, signUpPassword.value);
-    // console.log(signUpEmail.value, signUpPassword.value);
+    console.log(signUpEmail.value, signUpPassword.value);
     redirectIfLoggedIn();
 });
