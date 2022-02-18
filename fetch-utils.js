@@ -5,6 +5,12 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+export async function getPosts(){
+    const resp = await client.from('posts').select('*');
+    console.log(resp);
+    return checkError (resp);
+}
+
 export async function createPost(post){
     // eslint-disable-next-line no-undef
     const resp = await client.from('posts').insert(post);
