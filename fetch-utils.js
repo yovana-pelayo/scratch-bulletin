@@ -18,9 +18,29 @@ export async function getPost(id) {
 export async function createPost(post){
     // eslint-disable-next-line no-undef
     const resp = await client.from('posts').insert(post);
-    console.log(resp);
+    // console.log(resp);
     return checkError(resp);
 }
+export function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+export async function signupUser(email, password){
+    const resp = await client.auth.signUp({ email, password });
+    console.log(resp);
+}
+export async function signInUser(email, password){
+    const resp = await client.auth.signIn({ email, password });
+    console.log(resp);
+
+}
+export function redirectIfLoggedIn() {
+    const user = getUser();
+    console.log(user);
+    if (user){
+        location.replace('/user-page');
+    }
+}
+
 function checkError({ data, error }) {
     // eslint-disable-next-line no-console
     return error ? console.error(error) : data;

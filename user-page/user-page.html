@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+<button id="logout">Logout</button>
+    </header>
+    <main>
+        <form id="sign-in">
+            <label>Email</label>
+            <input type="email" name="email" id="sign-in-email">
+            <label>Password</label>
+            <input type="password" name="password" id="sign-in-password">
+            <Button>submit</Button>
+        </form>
+        <form id="sign-up">
+            <label>Email</label>
+            <input type="email" name="email" id="sign-up-email">
+            <label>Password</label>
+            <input type="password" name="password" id="sign-up-password">
+            <Button>submit</Button>
+        </form>
+           
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="./user-page.js"></script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ header {
     margin: 10px;
 }
 #login {
- background-color: rgb(10, 27, 8);
+ background-color: black;
  color: greenyellow;
  border-radius: 15%;
  border-color: rgb(30, 255, 0);
@@ -19,7 +19,7 @@ height: 60px;
 }
 
 #create {
-background-color: rgb(6, 2, 10);
+background-color: black;
 color: greenyellow;
 border-radius: 15%;
 border-color: rgb(30, 255, 0);
@@ -35,5 +35,7 @@ border-color: rgb(30, 255, 0);
 .post-list {
     background-color: yellowgreen;
     border: solid;
-   margin: 2px;
+    margin: 2px;
+   height: 70%;
+   width: 30%;
 }
