@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { getPosts, redirectIfLoggedIn } from './fetch-utils.js';
+import { getPosts } from './fetch-utils.js';
 import { renderPosts } from './render-utils.js';
 
 // let state
