@@ -8,7 +8,8 @@ export function renderPosts(post){
     p.textContent = post.message;
 
     const h3 = document.createElement('h3');
-    p.textContent = post.contact;
+    h3.textContent = post.contact;
+
     div.classList.add('post-list');
 
     div.append(h2, p, h3);
