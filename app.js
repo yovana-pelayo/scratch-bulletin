@@ -23,3 +23,9 @@ loginBtn.addEventListener('click', () => {
     redirectIfLoggedIn();
     
 });
+const createBtn = document.getElementById('create');
+createBtn.addEventListener('click', () => {
+    location.replace('./user-page');
+    redirectIfLoggedIn();
+
+});

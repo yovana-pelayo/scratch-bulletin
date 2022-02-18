@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // eslint-disable-next-line no-unused-vars
 import { redirectIfLoggedIn, signupUser, signInUser } from '../fetch-utils.js';
 
@@ -21,4 +22,8 @@ signUpForm.addEventListener('submit', async (e) =>{e.preventDefault();
     await signupUser(signUpEmail.value, signUpPassword.value);
     console.log(signUpEmail.value, signUpPassword.value);
     redirectIfLoggedIn();
+});
+const logoutBtn = document.getElementById('logout');
+logoutBtn.addEventListener('click', () => {
+    location.replace('/');
 });

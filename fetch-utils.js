@@ -35,7 +35,7 @@ export async function signInUser(email, password){
 export function redirectIfLoggedIn() {
     const user = getUser();
     if (user){
-        location.replace('/user-page');
+        location.replace('./user-page');
     }
 }
 export async function logout() {
