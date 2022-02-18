@@ -26,3 +26,14 @@ border-color: rgb(30, 255, 0);
    width: 80px;
    height: 60px;
    }
+
+/* #post-page {
+   border: solid;
+   background-color:greenyellow ;
+} */
+
+.post-list {
+    background-color: yellowgreen;
+    border: solid;
+   margin: 2px;
+}

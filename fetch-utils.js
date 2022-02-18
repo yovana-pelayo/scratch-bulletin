@@ -7,8 +7,12 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getPosts(){
     const resp = await client.from('posts').select('*');
-    console.log(resp);
     return checkError (resp);
+}
+
+export async function getPost(id) {
+    const resp = await client.from('posts').select('*').eq('id', id).single();
+    return checkError(resp);
 }
 
 export async function createPost(post){
