@@ -4,7 +4,11 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+export function checkAuth() {
+    const user = getUser();
 
+    if (!user) location.replace('../users-page');
+}
 export async function getPosts(){
     const resp = await client.from('posts').select('*');
     return checkError (resp);
@@ -35,12 +39,12 @@ export async function signInUser(email, password){
 export function redirectIfLoggedIn() {
     const user = getUser();
     if (user){
-        location.replace('./user-page');
+        location.replace('../other-page');
     }
 }
 export async function logout() {
     await client.auth.signOut();
-
+console.log('logout');
     return (window.location.href = '../');
 }
 function checkError({ data, error }) {

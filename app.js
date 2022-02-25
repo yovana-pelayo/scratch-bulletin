@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { getPosts, redirectIfLoggedIn } from './fetch-utils.js';
+import { getPosts } from './fetch-utils.js';
 import { renderPosts } from './render-utils.js';
 
 // let state
@@ -19,13 +19,11 @@ window.addEventListener('load', async () => {
 
 const loginBtn = document.getElementById('login');
 loginBtn.addEventListener('click', () => {
-    location.replace('./user-page');
-    redirectIfLoggedIn();
+    location.replace('./users-page');
     
 });
 const createBtn = document.getElementById('create');
 createBtn.addEventListener('click', () => {
-    location.replace('./user-page');
-    redirectIfLoggedIn();
+    location.replace('./users-page');
 
 });

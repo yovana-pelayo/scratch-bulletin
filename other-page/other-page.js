@@ -1,5 +1,5 @@
-import { checkAuth, logout } from '../fetch-utils';
-checkAuth();
+import { checkAuth, logout } from '../fetch-utils.js';
+// checkAuth();
 
 // const createForm = document.getElementById('create-post');
 // createForm.addEventListener('submit', async (e)=>{
@@ -14,7 +14,9 @@ checkAuth();
 //     // console.log(resp);
 // });
 const logoutButton = document.getElementById('logout');
+console.log(logoutButton);
 
 logoutButton.addEventListener('click', () => {
+    console.log('click');
     logout();
 });
